@@ -21,4 +21,8 @@
         <Using Include="NUnit.Framework"/>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Bakalari.NET\Bakalari.NET.csproj" />
+    </ItemGroup>
+
 </Project>
