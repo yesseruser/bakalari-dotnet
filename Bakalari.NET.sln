@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34526.213
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bakalari.NET", "Bakalari.NET\Bakalari.NET.csproj", "{BD3E74AF-E31E-4174-BC80-2F50E53DFCF5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BD3E74AF-E31E-4174-BC80-2F50E53DFCF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD3E74AF-E31E-4174-BC80-2F50E53DFCF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD3E74AF-E31E-4174-BC80-2F50E53DFCF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD3E74AF-E31E-4174-BC80-2F50E53DFCF5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A67E95D0-4802-4B06-AF29-3B863B429F00}
+	EndGlobalSection
+EndGlobal
