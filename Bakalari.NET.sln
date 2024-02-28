@@ -5,6 +5,8 @@ VisualStudioVersion = 17.9.34526.213
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bakalari.NET", "Bakalari.NET\Bakalari.NET.csproj", "{BD3E74AF-E31E-4174-BC80-2F50E53DFCF5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bakalari.NET.Tests", "Bakalari.NET.Tests\Bakalari.NET.Tests.csproj", "{BAB625AE-899C-4431-8D6C-A31BBF2930F1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{BD3E74AF-E31E-4174-BC80-2F50E53DFCF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD3E74AF-E31E-4174-BC80-2F50E53DFCF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD3E74AF-E31E-4174-BC80-2F50E53DFCF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAB625AE-899C-4431-8D6C-A31BBF2930F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAB625AE-899C-4431-8D6C-A31BBF2930F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAB625AE-899C-4431-8D6C-A31BBF2930F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAB625AE-899C-4431-8D6C-A31BBF2930F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
