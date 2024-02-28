@@ -18,7 +18,7 @@ namespace Bakalari.NET
             BaseUrl = baseUrl;
         }
 
-        public async Task<ApiInfo?> Get(HttpClient httpClient)
+        public static async Task<ApiInfo?> Get(HttpClient httpClient)
         {
             var response = await httpClient.GetAsync("api/3");
             var stringResponse = await response.Content.ReadAsStringAsync();
