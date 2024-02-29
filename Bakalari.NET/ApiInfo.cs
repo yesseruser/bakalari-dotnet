@@ -5,7 +5,7 @@ using Newtonsoft.Json;
 
 namespace Bakalari.NET
 {
-    public class ApiInfo
+    public class ApiInfo : ErrorInfo
     {
         public string ApiVersion { get; set; }
         public string ApplicationVersion { get; set; }
