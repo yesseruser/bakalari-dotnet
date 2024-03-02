@@ -6,5 +6,6 @@ namespace Bakalari.NET
     {
         [JsonProperty("UserUID")] public string UserID { get; set; }
         [JsonProperty("CampaignCategoryCode")] public string CampaignCategoryCode { get; set; }
+        [JsonProperty("Class")] public Class Class { get; set; }
     }
 }
