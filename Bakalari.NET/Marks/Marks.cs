@@ -10,7 +10,7 @@ namespace Bakalari.NET
         [JsonProperty("Subjects")] public Subject[]? Subjects { get; set; }
         
         // TODO: Add getter
-        public async Task<Marks?> GetMarks(HttpClient httpClient)
+        public static async Task<Marks?> GetMarks(HttpClient httpClient)
         {
             // Bearer token is added in Login
             using var response = await httpClient.GetAsync("/api/3/marks");
