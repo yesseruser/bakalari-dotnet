@@ -31,9 +31,7 @@ jobs:
 
     # Create the NuGet package in the folder from the environment variable NuGetDirectory
     - run: |
-        $OUT=$(curl -s "https://api.github.com/repos/${{ github.repository }}/releases/latest")
-        $TAG=$(echo "$OUT" | jq -r .tag_name)
-        dotnet pack ${{ env.Project }} --configuration Release --output ${{ env.NuGetDirectory }} --property:"Version"="$TAG"
+        dotnet pack ${{ env.Project }} --configuration Release --output ${{ env.NuGetDirectory }} --property:"Version"="${{ github.ref_name }}"
 
     # Publish the NuGet package as an artifact, so they can be used in the following jobs
     - uses: actions/upload-artifact@v3
