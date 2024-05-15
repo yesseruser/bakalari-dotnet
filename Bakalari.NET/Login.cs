@@ -43,7 +43,25 @@ namespace Bakalari.NET
 
             var content = new FormUrlEncodedContent(data);
 
-            HttpResponseMessage response = await httpClient.PostAsync("/api/login", content);
+            using var response = await httpClient.PostAsync("/api/login", content);
+
+            var resultString = await response.Content.ReadAsStringAsync();
+            var result = JsonConvert.DeserializeObject<Login>(resultString);
+            return result;
+        }
+
+        public static async Task<Login?> GetByRefreshToken(HttpClient httpClient, string refreshToken)
+        {
+            var data = new[]
+            {
+                new KeyValuePair<string, string>("client_id", "ANDR"),
+                new KeyValuePair<string, string>("grant_type", "refresh_token"),
+                new KeyValuePair<string, string>("refresh_token", refreshToken)
+            };
+
+            var content = new FormUrlEncodedContent(data);
+
+            using var response = await httpClient.PostAsync("/api/login", content);
 
             var resultString = await response.Content.ReadAsStringAsync();
             var result = JsonConvert.DeserializeObject<Login>(resultString);
