@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
@@ -31,6 +32,12 @@ namespace Bakalari.NET
             Scope = scope;
         }
 
+        public static void AddBearerTokenToHttpClient(HttpClient httpClient, string token)
+        {
+            httpClient.DefaultRequestHeaders.Authorization =
+                new AuthenticationHeaderValue("Bearer", token);
+        }
+        
         public static async Task<Login?> GetByPassword(HttpClient httpClient, string username, string password)
         {
             var data = new[]
@@ -47,6 +54,11 @@ namespace Bakalari.NET
 
             var resultString = await response.Content.ReadAsStringAsync();
             var result = JsonConvert.DeserializeObject<Login>(resultString);
+            
+            if (result != null && !string.IsNullOrWhiteSpace(result.AccessToken))
+                httpClient.DefaultRequestHeaders.Authorization =
+                    new AuthenticationHeaderValue("Bearer", "Your Oauth token");
+            
             return result;
         }
 
@@ -65,6 +77,11 @@ namespace Bakalari.NET
 
             var resultString = await response.Content.ReadAsStringAsync();
             var result = JsonConvert.DeserializeObject<Login>(resultString);
+            
+            if (result != null && !string.IsNullOrWhiteSpace(result.AccessToken))
+                httpClient.DefaultRequestHeaders.Authorization =
+                    new AuthenticationHeaderValue("Bearer", "Your Oauth token");
+            
             return result;
         }
     }
