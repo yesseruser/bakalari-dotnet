@@ -11,7 +11,7 @@ env:
   DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
   DOTNET_NOLOGO: true
   NuGetDirectory: ${{ github.workspace }}/nuget
-  Project: ${{ github.workspace }}/yTools
+  Project: ${{ github.workspace }}/Bakalari.NET
 
 defaults:
   run:
@@ -72,6 +72,6 @@ jobs:
       - name: Publish NuGet package
         run: |
           foreach($file in (Get-ChildItem "${{ env.NuGetDirectory }}" -Recurse -Include *.nupkg)) {
-              dotnet nuget push $file --api-key "${{ secrets.GH_APIKEY }}" --source https://nuget.pkg.github.com/${{github.repository_owner}}/index.json --skip-duplicate
+              dotnet nuget push $file --api-key "${{ secrets.GITHUB_TOKEN }}" --source https://nuget.pkg.github.com/${{github.repository_owner}}/index.json --skip-duplicate
               dotnet nuget push $file --api-key "${{ secrets.NUGET_APIKEY }}" --source https://api.nuget.org/v3/index.json --skip-duplicate
           }
