@@ -37,7 +37,7 @@ else
 
 Console.WriteLine("Refresh token:");
 Console.WriteLine(login!.RefreshToken);
+var marks = await Marks.GetMarks(client);
 
-var token = login.AccessToken;
-
-Console.WriteLine(token);
+Console.WriteLine("Marks:");
+Console.WriteLine(marks!.Subjects![0].Marks![0].MarkText);
