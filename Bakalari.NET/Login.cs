@@ -57,7 +57,7 @@ namespace Bakalari.NET
             
             if (result != null && !string.IsNullOrWhiteSpace(result.AccessToken))
                 httpClient.DefaultRequestHeaders.Authorization =
-                    new AuthenticationHeaderValue("Bearer", "Your Oauth token");
+                    new AuthenticationHeaderValue("Bearer", result.AccessToken);
             
             return result;
         }
@@ -80,7 +80,7 @@ namespace Bakalari.NET
             
             if (result != null && !string.IsNullOrWhiteSpace(result.AccessToken))
                 httpClient.DefaultRequestHeaders.Authorization =
-                    new AuthenticationHeaderValue("Bearer", "Your Oauth token");
+                    new AuthenticationHeaderValue("Bearer", result.AccessToken);
             
             return result;
         }
